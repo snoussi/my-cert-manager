@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ingress-controller-tls
+  namespace: openshift-ingress
+spec:
+  isCA: false
+  commonName: apps.<cluster_base_domain>
+  secretName: ingress-controller-certs
+  dnsNames:
+    - apps.<cluster_base_domain>
+    - '*.apps.<cluster_base_domain>'
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-cloudflare
