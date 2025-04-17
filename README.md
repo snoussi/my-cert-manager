@@ -23,8 +23,8 @@ oc apply -f cloudflare-api-token-secret.yml
 
 Open [letsEncrypt-cloudflare-clusterIssuer.yml](letsEncrypt-cloudflare-clusterIssuer.yml), and replace:
 
-- <mailto:your-letsencrypt-email@example.com> with your let's Encrypt Email
-- <mailto:your-cloudflare-email@example.com> with your Cloudflare Email
+- *your-letsencrypt-email@example.com* with your Let's Encrypt Email
+- *your-cloudflare-email@example.com* with your Cloudflare Email
 
 Then, run the following command:
 
